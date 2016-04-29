@@ -5,10 +5,42 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      font-size: 12px;
+    }
+    a { color: #c91717}
+
+    .wrapper {
+      width: 800px;
+      margin: 0px auto;
+    }
+
+    .login { display: inline-block}
+
+    form {}
+
+    form input {
+      display: block;
+      margin: 12px 0;
+      padding: 12px;
+      color: #EFEFEF;
+      border: 1px solid #EFEFEF;
+    }
+
+    form input[type=submit] {
+      background-color: #c91717;
+
+    }
+  </style>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="wrapper">
+  <%= yield %>
+</div>
 </body>
 </html>
