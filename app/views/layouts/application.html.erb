@@ -40,6 +40,14 @@
     #nav .title h1 { margin: 0; font-size: 18px; }
     #nav .sub { font-size: 14px;  font-family: Georgia, serif; }
 
+    #nav ul.user-nav {
+      right: 12px;
+      top: 12px;
+      position: absolute
+    }
+    #nav ul li { display: inline-block}
+    #nav ul li a { color: white; }
+
     .login { display: inline-block}
 
     form {}
@@ -52,8 +60,6 @@
     }
     form input[type=submit] { background: #c91717; color: white; }
 
-    ul {}
-    ul li {display: inline-block}
   </style>
 </head>
 <body>
@@ -62,6 +68,23 @@
     <h1>Raddit</h1>
     <span class="sub">Rails Reddit Clone</span>
   </div>
+
+  <ul>
+    <li><%= link_to "Posts", '/posts' %></li>
+  </ul>
+
+  <% if current_user %>
+      <ul class="user-nav">
+        <li><strong><%= current_user.username %></strong></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      </ul>
+  <% else %>
+      <ul class="user-nav">
+        <li><%= link_to "Login", '/login' %></li>
+        <li><%= link_to "Signup", '/signup' %></li>
+      </ul>
+  <% end %>
+
 </div>
 <div class="wrapper">
   <%= yield %>
