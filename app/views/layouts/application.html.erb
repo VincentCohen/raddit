@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 
   <style>
+    html {margin:0; padding:0}
     body {
       margin: 0;
       padding: 0;
@@ -17,28 +18,51 @@
 
     .wrapper {
       width: 800px;
-      margin: 0px auto;
+      margin: 60px auto;
+      padding: 12px 0;
     }
+
+    #nav {
+      background: #c91717;
+      color: white;
+      font-size: 12px;
+
+      box-sizing: border-box;
+      display: block;
+      position: fixed;
+      padding: 12px;
+      height: 60px;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    #nav .title { width: 400px; float: left;}
+    #nav .title h1 { margin: 0; font-size: 18px; }
+    #nav .sub { font-size: 14px;  font-family: Georgia, serif; }
 
     .login { display: inline-block}
 
     form {}
-
     form input {
       display: block;
       margin: 12px 0;
       padding: 12px;
-      color: #EFEFEF;
+      color: #757575;
       border: 1px solid #EFEFEF;
     }
+    form input[type=submit] { background: #c91717; color: white; }
 
-    form input[type=submit] {
-      background-color: #c91717;
-
-    }
+    ul {}
+    ul li {display: inline-block}
   </style>
 </head>
 <body>
+<div id="nav">
+  <div class="title">
+    <h1>Raddit</h1>
+    <span class="sub">Rails Reddit Clone</span>
+  </div>
+</div>
 <div class="wrapper">
   <%= yield %>
 </div>
