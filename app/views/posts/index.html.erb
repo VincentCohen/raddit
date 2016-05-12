@@ -1,1 +1,6 @@
-#posts.index
+<% @posts.each do |p| %>
+    <div class="p2 border-color-blaze border-top border-color-smoke">
+      <h2 class="m0 p0"><%= p.title %></h2>
+      <p><%= p.description %></p>
+    </div>
+<% end %>

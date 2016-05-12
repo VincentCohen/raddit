@@ -1,0 +1,18 @@
+<h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
+<div class="login">
+  <div class="container">
+    <div class="form">
+
+      <%= form_for(@post) do |f| %>
+
+          <%= f.text_field :title, :placeholder => "Title", class: 'p1 mt2 block border1 border-color-smoke' %>
+          <%= f.text_area :description, :placeholder => "Description", class: 'p1 border1 mt2 block border-color-smoke' %>
+          <%= f.text_area :body, :placeholder => "Body", class: 'p1 border1 mt2 block border-color-smoke' %>
+
+          <%= f.submit "Post", class: "background-color-fire p1 mt2 border-none color-canvas" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
