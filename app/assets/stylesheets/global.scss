@@ -96,10 +96,13 @@ body {
   font-size: $typography-size-small;
 }
 
-a { color: $fire }
+a { color: $fire; text-decoration: none }
 p { color: $charcoal }
 
+div { box-sizing: border-box}
+
 .inline-list li { display: inline-block; }
+.clearfix {clear:both }
 
 .wrapper {
   width: 800px;
@@ -108,12 +111,5 @@ p { color: $charcoal }
 }
 
 #nav {
-  box-sizing: border-box;
-  display: block;
-  position: fixed;
-  padding: $spacing1;
   height: 80px;
-  left: 0;
-  right: 0;
-  top: 0;
 }

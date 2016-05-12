@@ -8,7 +8,18 @@
 </head>
 <body class="m0 p0 background-color-fog">
 
-  <div id="nav" class="inline-list background-color-fire">
+  <div class="block">
+    <div class="background-color-fire p1 block fl" style="width:10%">fire</div>
+    <div class="background-color-blaze p1 block fl" style="width:10%">blaze</div>
+    <div class="background-color-hazard p1 block fl" style="width:10%">hazard</div>
+    <div class="background-color-coal p1 block fl" style="width:10%">coal</div>
+    <div class="background-color-charcoal p1 block fl" style="width:10%">charcoal</div>
+    <div class="background-color-smoke p1 block fl" style="width:10%">smoke</div>
+    <div class="background-color-fog p1 block fl" style="width:10%">fog</div>
+    <div class="background-color-canvas p1 block fl" style="width:10%">canvas</div>
+  </div>
+
+  <div id="nav" class="background-color-fire clearfix p2">
     <div class="fl">
       <h1 class="m0 color-canvas">Raddit</h1>
       <span class="sub color-canvas">Rails Reddit Clone</span>
@@ -18,31 +29,20 @@
       <li class="p1"><%= link_to "Posts", '/posts', class: 'color-canvas' %></li>
     </ul>
 
-    <% if current_user %>
-        <ul class="fr">
-          <li class="p1"><strong><%= link_to current_user.username, '/profile', class: 'color-canvas' %></strong></li>
-          <li class="p1"><%= link_to "Log out", logout_path, class: 'color-canvas', method: "delete" %></li>
-        </ul>
-    <% else %>
-        <ul class="fr">
-          <li class="p1"><%= link_to "Login", '/login', class: 'color-canvas' %></li>
-          <li class="p1"><%= link_to "Signup", '/signup', class: 'color-canvas' %></li>
-        </ul>
-    <% end %>
+    <ul class="inline-list typography-small fr">
+      <% if current_user %>
+        <li class="p1"><strong><%= link_to current_user.username, '/profile', class: 'color-canvas' %></strong></li>
+        <li class="p1"><%= link_to "Log out", logout_path, class: 'color-canvas', method: "delete" %></li>
+      <% else %>
+        <li class="p1"><%= link_to "Login", '/login', class: 'color-canvas' %></li>
+        <li class="p1"><%= link_to "Signup", '/signup', class: 'color-canvas' %></li>
+      <% end %>
+    </ul>
   </div>
 
   <div class="wrapper background-color-canvas p2">
     <%= yield %>
   </div>
-
-  <div class="background-color-fire p1">//.. fire</div>
-  <div class="background-color-blaze p1">//.. blaze</div>
-  <div class="background-color-hazard p1">//.. hazard</div>
-  <div class="background-color-fog p1">//.. fog</div>
-  <div class="background-color-smoke p1">//.. smoke</div>
-  <div class="background-color-canvas p1">//.. canvas</div>
-  <div class="background-color-charcoal p1">//.. charcoal</div>
-  <div class="background-color-coal p1">//.. coal</div>
 
 </body>
 </html>
