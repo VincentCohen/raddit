@@ -1,93 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html class="m0 p0">
 <head>
   <title>Raddit</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-  <style>
-    html {margin:0; padding:0}
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      font-size: 12px;
-    }
-    a { color: #c91717}
-
-    .wrapper {
-      width: 800px;
-      margin: 60px auto;
-      padding: 12px 0;
-    }
-
-    #nav {
-      background: #c91717;
-      color: white;
-      font-size: 12px;
-
-      box-sizing: border-box;
-      display: block;
-      position: fixed;
-      padding: 12px;
-      height: 60px;
-      left: 0;
-      right: 0;
-      top: 0;
-    }
-    #nav .title { width: 400px; float: left;}
-    #nav .title h1 { margin: 0; font-size: 18px; }
-    #nav .sub { font-size: 14px;  font-family: Georgia, serif; }
-
-    #nav ul.user-nav {
-      right: 12px;
-      top: 12px;
-      position: absolute
-    }
-    #nav ul li { display: inline-block}
-    #nav ul li a { color: white; }
-
-    .login { display: inline-block}
-
-    form {}
-    form input {
-      display: block;
-      margin: 12px 0;
-      padding: 12px;
-      color: #757575;
-      border: 1px solid #EFEFEF;
-    }
-    form input[type=submit] { background: #c91717; color: white; }
-
-  </style>
 </head>
-<body>
-  <div id="nav">
-    <div class="title">
-      <h1>Raddit</h1>
-      <span class="sub">Rails Reddit Clone</span>
+<body class="m0 p0 background-color-smoke">
+
+  <div id="nav" class="inline-list background-color-fire">
+    <div class="fl">
+      <h1 class="m0 color-canvas">Raddit</h1>
+      <span class="sub color-canvas">Rails Reddit Clone</span>
     </div>
 
-    <ul>
-      <li><%= link_to "Posts", '/posts' %></li>
+    <ul class="inline-list typography-small fl">
+      <li class="p1"><%= link_to "Posts", '/posts', class: 'color-canvas' %></li>
     </ul>
 
     <% if current_user %>
-        <ul class="user-nav">
-          <li><strong><%= link_to current_user.username, '/profile' %></strong></li>
-          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <ul class="fr">
+          <li class="p1"><strong><%= link_to current_user.username, '/profile', class: 'color-canvas' %></strong></li>
+          <li class="p1"><%= link_to "Log out", logout_path, class: 'color-canvas', method: "delete" %></li>
         </ul>
     <% else %>
-        <ul class="user-nav">
-          <li><%= link_to "Login", '/login' %></li>
-          <li><%= link_to "Signup", '/signup' %></li>
+        <ul class="fr">
+          <li class="p1"><%= link_to "Login", '/login', class: 'color-canvas' %></li>
+          <li class="p1"><%= link_to "Signup", '/signup', class: 'color-canvas' %></li>
         </ul>
     <% end %>
-
   </div>
-  <div class="wrapper">
+
+  <div class="wrapper background-color-canvas">
     <%= yield %>
   </div>
+
 </body>
 </html>
