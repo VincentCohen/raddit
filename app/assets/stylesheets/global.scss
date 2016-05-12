@@ -2,6 +2,9 @@ $spacing1: 12px;
 $spacing2: 24px;
 
 $fire: #c91717;
+$blaze: #fc1919;
+$hazard: #ff6d43;
+$fog: #f9f9f9;
 $smoke: #e5e5e5;
 $canvas: white;
 $charcoal: #bcbcbc;
@@ -13,12 +16,18 @@ $typography-size-large: 18px;
 $typography-size-extra-large: 22px;
 
 .color-fire { color: $fire; }
+.color-blaze { color: $blaze; }
+.color-hazard { color: $hazard; }
+.color-fog { color: $fog; }
 .color-smoke { color: $smoke; }
 .color-canvas { color: $canvas;}
 .color-charcoal { color: $charcoal; }
 .color-coal { color: $coal; }
 
 .background-color-fire { background-color: $fire; }
+.background-color-blaze { background-color: $blaze; }
+.background-color-hazard { background-color: $hazard; }
+.background-color-fog { background-color: $fog; }
 .background-color-smoke { background-color: $smoke; }
 .background-color-canvas { background-color: $canvas; }
 .background-color-charcoal { background-color: $charcoal; }
@@ -28,6 +37,9 @@ $typography-size-extra-large: 22px;
 .border1 { border-width: 1px; border-style: solid;}
 
 .border-color-fire { border-color: $fire; }
+.border-color-blaze { border-color: $blaze; }
+.border-color-hazard { border-color: $hazard; }
+.border-color-fog { border-color: $fog; }
 .border-color-smoke { border-color: $smoke; }
 .border-color-canvas { border-color: $canvas; }
 .border-color-charcoal { border-color: $charcoal; }
@@ -86,7 +98,6 @@ p { color: $charcoal }
 .wrapper {
   width: 800px;
   margin: 80px auto;
-  padding: $spacing2;
   position: relative;
 }
 

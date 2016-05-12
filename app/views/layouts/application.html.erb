@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="m0 p0 background-color-smoke">
+<body class="m0 p0 background-color-fog">
 
   <div id="nav" class="inline-list background-color-fire">
     <div class="fl">
@@ -31,9 +31,18 @@
     <% end %>
   </div>
 
-  <div class="wrapper background-color-canvas">
+  <div class="wrapper background-color-canvas p2">
     <%= yield %>
   </div>
+
+  <div class="background-color-fire p1">//.. fire</div>
+  <div class="background-color-blaze p1">//.. blaze</div>
+  <div class="background-color-hazard p1">//.. hazard</div>
+  <div class="background-color-fog p1">//.. fog</div>
+  <div class="background-color-smoke p1">//.. smoke</div>
+  <div class="background-color-canvas p1">//.. canvas</div>
+  <div class="background-color-charcoal p1">//.. charcoal</div>
+  <div class="background-color-coal p1">//.. coal</div>
 
 </body>
 </html>
