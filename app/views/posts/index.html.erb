@@ -2,7 +2,12 @@
 
 <% @posts.each_with_index do |p, idx | %>
     <div class="p2 border-color-blaze <% if idx > 0 %> border-top border-color-smoke <% end %>">
-      <h2 class="m0 p0"><%= p.title %></h2>
+      <h2 class="m0 p0">
+        <%= p.title %>
+
+        <%= link_to "^", upvote_post_path(p), class: '-js-ajax-post color-fire background-color-smoke p1 rounded rounded-xl typography-small fr' %>
+
+      </h2>
       <p><%= p.description %></p>
     </div>
 <% end %>

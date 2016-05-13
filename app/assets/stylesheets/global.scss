@@ -1,6 +1,12 @@
 $spacing1: 12px;
 $spacing2: 24px;
 
+$rounded-radius: 2px;
+$rounded-radius-l: 4px;
+$rounded-radius-xl: 6px;
+$rounded-radius-xxl: 8px;
+$rounded-radius-xxxl: 10px;
+
 $fire: #c91717;
 $blaze: #fc1919;
 $hazard: #ff6d43;
@@ -9,6 +15,7 @@ $smoke: #e5e5e5;
 $canvas: white;
 $charcoal: #bcbcbc;
 $coal: #666666;
+
 
 $typography-size-small: 12px;
 $typography-size-medium: 14px;
@@ -89,6 +96,12 @@ $typography-size-extra-large: 22px;
 .mb2 { margin-bottom: $spacing2 }
 
 .block { display: block }
+
+.rounded { border-radius: $rounded-radius; }
+.rounded-l { border-radius: $rounded-radius-l; }
+.rounded-xl { border-radius: $rounded-radius-xl; }
+.rounded-xxl { border-radius: $rounded-radius-xxl; }
+.rounded-xxxl { border-radius: $rounded-radius-xxxl; }
 
 
 body {

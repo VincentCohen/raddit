@@ -11,7 +11,10 @@ Rails.application.routes.draw do
 
   get 'profile'   => 'profile#index'
 
-  resources :posts, only: [:create, :new, :destroy, :index]
+  resources :posts, only: [:create, :new, :destroy, :index] do
+    post 'upvote', on: :member
+  end
+
   resources :users
 
 
