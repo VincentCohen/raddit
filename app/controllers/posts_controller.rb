@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
 
   before_action :require_user, only: [:new, :create, :destroy]
+  before_action :set_post, only: [:upvote]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse_order
   end
 
   def new
@@ -19,14 +20,29 @@ class PostsController < ApplicationController
     end
   end
 
+  def upvote
+    @vote = Vote.create(vote_params)
+
+    render :nothing => true, :status => 201
+  end
+
   def destroy
 
   end
 
+  private
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  private
+  def vote_params
+    params.require(:vote).permit(:vote_id, :post_id)
+  end
 
   private
   def post_params
-    params.require(:post).permit(:title, :description, :body)
+    params.require(:post).permit(:title, :description, :body, :user_id)
   end
 
 end

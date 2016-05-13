@@ -10,6 +10,10 @@
           <%= f.text_area :description, :placeholder => "Description", class: 'p1 border1 mt2 block border-color-smoke' %>
           <%= f.text_area :body, :placeholder => "Body", class: 'p1 border1 mt2 block border-color-smoke' %>
 
+
+          <%= hidden_field(:post, :user_id, :value => @current_user.id) %>
+
+
           <%= f.submit "Post", class: "background-color-fire p1 mt2 border-none color-canvas" %>
       <% end %>
 

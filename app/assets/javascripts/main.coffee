@@ -5,4 +5,10 @@
 $(document).on 'click', '.-js-ajax-post', (e)->
   e.preventDefault();
 
+  endpoint = $(this).attr('href');
+
+  $.post endpoint, (data)->
+    console.log(data);
+
+
   alert('vote me up');
