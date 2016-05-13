@@ -3,8 +3,7 @@ class AddVote < ActiveRecord::Migration
     create_table :votes do |t|
       t.timestamps null: false
 
-      t.references :user
-      t.references :post
+      t.references :user, :post
     end
   end
 end
