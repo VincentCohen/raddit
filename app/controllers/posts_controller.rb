@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:upvote]
 
   def index
-    @posts = Post.all.reverse_order
+    @posts = Post.includes(:user, :votes).all.reverse_order
   end
 
   def new

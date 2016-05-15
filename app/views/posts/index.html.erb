@@ -5,13 +5,16 @@
       <h2 class="m0 p0">
         <%= p.title %>
 
-        <%= link_to "^", upvote_post_path(p), class: '-js-ajax-post color-fire background-color-smoke p1 rounded rounded-xl typography-small fr' %>
 
+        <%= link_to "^", upvote_post_path(p), class: '-js-ajax-post color-fire background-color-smoke p1 rounded rounded-xl typography-small fr' %>
       </h2>
+
+      <% if p.user %>
+        <strong><%= p.user.username %></strong>
+      <% end %>
+
       <p><%= p.description %></p>
 
-      <pre>
-        <%= p.inspect %>
-      </pre>
+      <%= p.votes.pretty_print_inspect %>
     </div>
 <% end %>

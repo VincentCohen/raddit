@@ -25,10 +25,6 @@
       <span class="sub color-canvas">Rails Reddit Clone</span>
     </div>
 
-    <ul class="inline-list typography-small fl">
-      <li class="p1"><%= link_to "Posts", '/posts', class: 'color-canvas' %></li>
-    </ul>
-
     <ul class="inline-list typography-small fr">
       <% if current_user %>
         <li class="p1"><strong><%= link_to current_user.username, '/profile', class: 'color-canvas' %></strong></li>
@@ -40,7 +36,15 @@
     </ul>
   </div>
 
-  <div class="wrapper background-color-canvas p2">
+  <div class="wrapper mla mra mt2">
+    <ul class="inline-list typography-small p0">
+      <li class="mr1"><%= link_to "Posts", '/posts', class: 'block color-blaze background-color-smoke p1' %></li>
+      <li class="mr1"><%= link_to "Trending", '/posts', class: 'block color-blaze background-color-smoke p1' %></li>
+      <li><%= link_to "Stories", '/posts', class: 'block color-blaze background-color-smoke p1' %></li>
+    </ul>
+  </div>
+
+  <div class="wrapper background-color-canvas p2 mla mra mt2">
     <%= yield %>
   </div>
 
